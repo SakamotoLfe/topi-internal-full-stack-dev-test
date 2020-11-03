@@ -2,7 +2,7 @@
 
 ## Goal
 - To develop a web application able to display a grid with the most starred repositories of a language in github. 
-- The URL with the repos: https://api.github.com/search/repositories?q=language:Java&sort=stars&page=1
+- The URL with the repos: https://api.github.com/search/repositories?q=language:???&sort=stars&page=1
 
 ## Required
 - You need to develop both the front-end and the back-end. The language will be defined by the tester
