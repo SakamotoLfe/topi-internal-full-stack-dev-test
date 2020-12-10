@@ -1,20 +1,20 @@
 # TOPi - Full Stack Developer Test
 
 ## Goal
-- To develop a web application able to display a grid with the most starred repositories of a language in github. 
-- The URL with the repos: https://api.github.com/search/repositories?q=language:???&sort=stars&page=1
+- To develop a web application able to display a grid with the searched CEP or part of the address. 
+- The API reference: https://viacep.com.br
 
 ## Required
 - You need to develop both the front-end and the back-end. The language will be defined by the tester
-- Each row of the grid must display at least: the user's photo, repository name, number of stars and the number of forks
+- If searching with the address, display a list of the matching results with: CEP, Logradouro, Complemento, Bairro, Localidade, UF, IBGE Code, DDD
 - Readable code (variable names, structures)
-- Paging or infinite scrolling
-- Language selection via SearchBar or Dropdown menu
+- Paging or infinite scrolling (when searching with part the address load/show the results 10 at a time)
 - At least one unit test
 - Deploy to a server (AWS, Heroku, Azure, etc)
 
 ## Extra Points
-- Persist the data locally (any database or serialized)
+- Show the map location with the address
+- Persist the loaded data (any database or serialized)
 - Mobile friendly
 - Use Lightning Design - http://lightningdesignsystem.com/
 - A cool design
