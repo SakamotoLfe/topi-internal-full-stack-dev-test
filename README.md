@@ -1,20 +1,24 @@
 # TOPi - Full Stack Developer Test
 
 ## Goal
-- To develop a web application able to display a grid with the most starred repositories of a language in github. 
-- The URL with the repos: https://api.github.com/search/repositories?q=language:???&sort=stars&page=1
+- To develop a web application able to display a list of searched meals on TheMealDB. 
+- The API example: https://www.themealdb.com/api/json/v1/1/search.php?s=Chicken
 
 ## Required
 - You need to develop both the front-end and the back-end. The language will be defined by the tester
-- Each row of the grid must display at least: the user's photo, repository name, number of stars and the number of forks
+- Display a list of the meals with each row containing: name, category, area, thumbnail and the cooking instructions
+- There must be a search bar to search for the meals
 - Readable code (variable names, structures)
 - Paging or infinite scrolling
-- Language selection via SearchBar or Dropdown menu
 - At least one unit test
 - Deploy to a server (AWS, Heroku, Azure, etc)
 
 ## Extra Points
-- Persist the data locally (any database or serialized)
+- Persist the loaded data (any database or serialized)
 - Mobile friendly
 - Use Lightning Design - http://lightningdesignsystem.com/
-- A cool design
+- A cool design  
+
+
+** * Make your repo private and add the following e-mails for reviewing the code after you finish the test:**  
+rafael.colatusso@topi.io, eduardo.carvalho@topi.io, oseas.tormen@topi.io, watson.marconato@topi.io
