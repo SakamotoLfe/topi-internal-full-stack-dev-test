@@ -17,4 +17,8 @@
 - Persist the loaded data (any database or serialized)
 - Mobile friendly
 - Use Lightning Design - http://lightningdesignsystem.com/
-- A cool design
+- A cool design  
+
+
+** * Make your repo private and add the following e-mails for reviewing the code after you finish the test:**  
+rafael.colatusso@topi.io, eduardo.carvalho@topi.io, oseas.tormen@topi.io, watson.marconato@topi.io
