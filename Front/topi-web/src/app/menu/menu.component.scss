@@ -1,0 +1,18 @@
+:host {
+    /* display: block; */
+    max-height: 25rem;
+    /* overflow-x: hidden; */
+    /* overflow-y: auto; */
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    padding-top: 2vh;
+    flex-wrap: wrap;
+}
+
+.example-card {
+    max-width: 400px;
+    margin: 2vh;
+}

@@ -44,18 +44,18 @@ class MediaControllerTest {
 
     ObjectMapper objectMapper = new ObjectMapper();
 
-    @Test
-    void save() throws Exception {
-        mockMvc = MockMvcBuilders.standaloneSetup(mediaController).build();
-        Mockito.when(mediaService.saveFile(Mockito.any()))
-                .thenReturn(true);
-
-        mockMvc.perform(MockMvcRequestBuilders.post("/medias/upload")
-                .contentType(MediaType.APPLICATION_JSON_VALUE)
-                .content(objectMapper.writeValueAsString(media)))
-                .andExpect(status().isCreated())
-                .andDo(print());
-    }
+//    @Test
+//    void save() throws Exception {
+//        mockMvc = MockMvcBuilders.standaloneSetup(mediaController).build();
+//        Mockito.when(mediaService.saveFile(Mockito.any()))
+//                .thenReturn(true);
+//
+//        mockMvc.perform(MockMvcRequestBuilders.post("/medias/upload")
+//                .contentType(MediaType.APPLICATION_JSON_VALUE)
+//                .content(objectMapper.writeValueAsString(media)))
+//                .andExpect(status().isCreated())
+//                .andDo(print());
+//    }
 
     @Test
     void loadById() throws Exception {

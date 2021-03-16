@@ -1,0 +1,7 @@
+{
+    "/topi/api/*": {
+      "target": "http://localhost:8989",
+      "changeOrigin": true,
+      "secure": false
+    }
+  }
