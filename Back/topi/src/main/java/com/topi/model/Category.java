@@ -1,5 +1,7 @@
 package com.topi.model;
 
+import org.hibernate.annotations.Where;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import java.util.Date;
@@ -12,6 +14,7 @@ import java.util.Objects;
  */
 
 @Entity(name = "categories")
+@Where(clause = "enabled = true")
 public class Category extends BasicEntity {
 
     /**

@@ -1,5 +1,7 @@
 package com.topi.model;
 
+import org.hibernate.annotations.Where;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Transient;
@@ -14,6 +16,7 @@ import java.util.Objects;
  */
 
 @Entity(name = "medias")
+@Where(clause = "enabled = true")
 public class Media extends BasicEntity {
 
     /**

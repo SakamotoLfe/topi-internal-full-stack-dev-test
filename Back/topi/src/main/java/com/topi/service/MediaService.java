@@ -1,6 +1,10 @@
 package com.topi.service;
 
+import com.topi.model.Ingredient;
 import com.topi.model.Media;
+import com.topi.predicate.criteria.SearchPredicate;
+import com.topi.predicate.impl.MediaPredicate;
+import com.topi.repository.BasicRepository;
 import com.topi.repository.MediaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -36,7 +40,7 @@ import java.util.Set;
  */
 
 @Service
-public class MediaService {
+public class MediaService extends BasicService<Media> {
 
     /**
      * Media Repository Instance.
@@ -57,6 +61,27 @@ public class MediaService {
     public MediaService(MediaRepository mediaRepository, @Value("${path-medias}") String path) {
         this.mediaRepository = mediaRepository;
         this.path = path;
+    }
+
+    /**
+     * Method that return to BasicService the Repository specified of this class.
+     *
+     * @return {@link BasicRepository<Media>}. Repository specified on the runtime.
+     */
+    @Override
+    protected BasicRepository<Media> getBasicRepository() {
+        return mediaRepository;
+    }
+
+    /**
+     * Method that returns to BasicService the Predicate specified of this class.
+     *
+     * @param search Criteria that's being searched.
+     * @return {@link SearchPredicate<Media>}. SearchPredicate specified on the runtime.
+     */
+    @Override
+    protected SearchPredicate<Media> getSearchPredicate(String search) {
+        return new MediaPredicate(search);
     }
 
     /**

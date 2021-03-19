@@ -1,6 +1,8 @@
 package com.topi.controller;
 
+import com.topi.model.Instruction;
 import com.topi.model.Media;
+import com.topi.service.BasicService;
 import com.topi.service.MediaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,7 +24,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/medias")
-public class MediaController {
+public class MediaController extends BasicController<Media> {
 
     /**
      * Media Service Instance.
@@ -37,6 +39,16 @@ public class MediaController {
     @Autowired
     public MediaController(MediaService mediaService) {
         this.mediaService = mediaService;
+    }
+
+    /**
+     * Method that returns to BasicController the specified Service of this class.
+     *
+     * @return {@link BasicService<Media>}. Specified Service of this class.
+     */
+    @Override
+    protected BasicService<Media> getBasicService() {
+        return mediaService;
     }
 
     /**
