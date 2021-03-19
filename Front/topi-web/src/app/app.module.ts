@@ -21,6 +21,13 @@ import { MediaComponent } from './media/media.component';
 import { MediaCrudComponent } from './media-crud/media-crud.component';
 import { TagComponent } from './tag/tag.component';
 import { TagCrudComponent } from './tag-crud/tag-crud.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -47,6 +54,14 @@ import { TagCrudComponent } from './tag-crud/tag-crud.component';
     MatCardModule,
     MatToolbarModule,
     MatButtonModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,28 @@
+.example-container {
+  height: 400px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.example-form-field {
+  width: 200px;
+}
+
+[padding-20p] {
+  padding: 20px;
+}
+
+[text-color-white] {
+  color: white;
+}
+
+[gray-bg] {
+  background-color: #494949;
+}
+
+.fix-filter {
+  width: calc(100% - 40px);
+}

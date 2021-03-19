@@ -1,5 +1,6 @@
 package com.topi.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -29,7 +30,7 @@ public class Meal extends BasicEntity {
     /**
      * Category of the meal.
      */
-    @ManyToOne
+    @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST })
     private Category category;
 
     /**
@@ -41,7 +42,7 @@ public class Meal extends BasicEntity {
     /**
      * Meal's tags.
      */
-    @ManyToMany
+    @ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST })
     private List<Tag> tags;
 
     /**
@@ -53,20 +54,20 @@ public class Meal extends BasicEntity {
     /**
      * Meal's thumbnail.
      */
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Media thumbnail;
 
     /**
      * Meal's sintructions.
      */
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "meal_id")
     private List<Instruction> cookingInstructions;
 
     /**
      * Meal's ingredients
      */
-    @OneToMany
+    @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST })
     @JoinColumn(name = "meal_id")
     private List<Ingredient> ingredients;
 
